@@ -24,4 +24,12 @@ class CashbackHackerTest {
 
     }
 
+    @Test
+    void checkNegativeNumber() {
+        CashbackHacker cashbackHacker = new CashbackHacker();
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> cashbackHacker.remain(0));
+
+    }
 }
